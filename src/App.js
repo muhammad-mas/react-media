@@ -1,8 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
+import UsersList from "./components/UsersList";
 
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="mx-auto container">
+      <UsersList />
+    </div>
+  );
 }
 
 export default App;

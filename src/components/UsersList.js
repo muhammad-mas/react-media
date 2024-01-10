@@ -26,23 +26,23 @@ function UsersList() {
   }
   return (
     <div>
-      <div>
+      <div className="flex flex-row justify-between m-3">
         {/* button to add user */}
+        <h1 className="m-2 text-xl">Users</h1>
         <Button primary onClick={handleAddUser}>
           Add User
         </Button>
       </div>
-      <div>
-        {data.map((u) => {
-          return (
-            <div key={u.id} className={"mb-2 border rounded"}>
-              <div className="flex p-2 justify-between items-center cursor-pointer">
-                {u.name}
-              </div>
+
+      {data.map((u) => {
+        return (
+          <div key={u.id} className={"mb-2 border rounded"}>
+            <div className="flex p-2 justify-between items-center cursor-pointer">
+              {u.name}
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

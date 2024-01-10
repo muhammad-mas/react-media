@@ -1,7 +1,23 @@
 {
-    "users":[
-        { "id":1 , "name":"Myra" , "email":"myra@gmail.com"}
-    ],
-    "albums":[],
-    "photos":[]
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra",
+      "email": "myra@gmail.com"
+    },
+    {
+      "id": "fc8d",
+      "name": "Jesus Kovacek"
+    },
+    {
+      "id": "de64",
+      "name": "Abraham Volkman"
+    },
+    {
+      "id": "3ba2",
+      "name": "Reginald Hermiston Sr."
+    }
+  ],
+  "albums": [],
+  "photos": []
 }

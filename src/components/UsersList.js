@@ -13,12 +13,12 @@ function UsersList() {
   if (isLoading) {
     return (
       <div>
-        <Skeleton></Skeleton>
+        <Skeleton times={6} className={"h-10 w-full"}></Skeleton>
       </div>
     );
   }
   if (error) {
-    return <div>{error}</div>;
+    return <div>{error.message}</div>;
   }
   return (
     <div>

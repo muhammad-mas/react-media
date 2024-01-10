@@ -1,16 +1,28 @@
 import classNames from "classnames";
-function Skeleton({ times }) {
-  const outerClassNames = "";
-  const innerClassNames = "";
+function Skeleton({ times, className }) {
+  const outerClassNames = classNames(
+    "relative",
+    "overflow-hidden",
+    "bg-gray-200",
+    "rounded",
+    "mb-2.5",
+    className
+  );
+  const innerClassNames = classNames(
+    "absolute",
+    "animate-shimmer",
+    "inset-0",
+    "-translate-x-full",
+    "bg-gradient-to-r",
+    "from-gray-200",
+    "via-white",
+    "to-gray-200"
+  );
   const boxes = Array(times)
     .fill(0)
     .map((_, i) => (
-      <div key={i}>
-        <div className="skeleton">
-          <div className="skeleton__avatar"></div>
-          <div className="skeleton__author"></div>
-          <div className="skeleton__details"></div>
-        </div>
+      <div key={i} className={outerClassNames}>
+        <div className={innerClassNames}></div>
       </div>
     ));
   return boxes;

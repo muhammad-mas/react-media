@@ -65,6 +65,7 @@ const albumsApi = createApi({
       fetchPhotos: builder.query({
         providesTags: (result, err, album) => {
           const resultTags = result?.map(({ id }) => ({ type: "Photo", id }));
+          console.log(resultTags);
           return [
             {
               type: "PhotosAlbum",
@@ -103,7 +104,7 @@ const albumsApi = createApi({
         }),
       }),
       deletePhoto: builder.mutation({
-        providesTags: (result, err, photo) => {
+        invalidatesTags: (result, err, photo) => {
           return [
             {
               type: "Photo",

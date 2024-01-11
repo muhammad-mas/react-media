@@ -1,4 +1,9 @@
-import { useAddPhotoMutation, useFetchPhotosQuery } from "../store";
+import { GoTrashcan } from "react-icons/go";
+import {
+  useAddPhotoMutation,
+  useDeletePhotoMutation,
+  useFetchPhotosQuery,
+} from "../store";
 import Button from "./Button";
 import Skeleton from "./Skeleton";
 
@@ -11,6 +16,11 @@ function Photos({ album }) {
     isLoading,
   } = useFetchPhotosQuery(album);
 
+  const [deletePhoto, deletePhotoResult] = useDeletePhotoMutation();
+  console.log(deletePhotoResult);
+  function handleDeletePhoto(photo) {
+    deletePhoto(photo);
+  }
   function handleAddPhoto() {
     addPhoto(album);
   }
@@ -23,6 +33,17 @@ function Photos({ album }) {
     content = photos.map((photo) => {
       return (
         <div key={photo.id} className="flex flex-row gap-2">
+          <Button
+            loading={
+              deletePhotoResult.isLoading &&
+              deletePhotoResult.originalArgs?.id === photo.id
+            }
+            onClick={() => {
+              handleDeletePhoto(photo);
+            }}
+          >
+            <GoTrashcan />
+          </Button>
           <img
             src={photo.thumbnailUrl}
             alt={photo.title}

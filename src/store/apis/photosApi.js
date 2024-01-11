@@ -6,7 +6,7 @@ const photosApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3001",
     fetchFn: async (...args) => {
-      await pause(1000);
+      //   await pause(1000);
       return fetch(...args);
     },
   }),

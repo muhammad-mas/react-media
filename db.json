@@ -63,6 +63,11 @@
       "id": "876d",
       "userId": "67fe",
       "title": "Intelligent Concrete Sausages"
+    },
+    {
+      "id": "115b",
+      "userId": "67fe",
+      "title": "Electronic Steel Table"
     }
   ],
   "photos": [
@@ -70,6 +75,27 @@
       "id": "ff5a",
       "albumId": "81f5",
       "title": "Sleek Concrete Tuna",
+      "url": "https://loremflickr.com/640/480",
+      "thumbnailUrl": "https://loremflickr.com/640/480"
+    },
+    {
+      "id": "2000",
+      "albumId": "81f5",
+      "title": "Sleek Concrete Keyboard",
+      "url": "https://loremflickr.com/640/480",
+      "thumbnailUrl": "https://loremflickr.com/640/480"
+    },
+    {
+      "id": "a7a6",
+      "albumId": "504c",
+      "title": "Handcrafted Concrete Chips",
+      "url": "https://loremflickr.com/640/480",
+      "thumbnailUrl": "https://loremflickr.com/640/480"
+    },
+    {
+      "id": "2b0b",
+      "albumId": "504c",
+      "title": "Rustic Concrete Computer",
       "url": "https://loremflickr.com/640/480",
       "thumbnailUrl": "https://loremflickr.com/640/480"
     }

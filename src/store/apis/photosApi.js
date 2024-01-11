@@ -48,8 +48,8 @@ const photosApi = createApi({
           body: {
             albumId: album.id,
             title: faker.commerce.productName(),
-            url: faker.image.imageUrl(),
-            thumbnailUrl: faker.image.imageUrl(),
+            url: faker.image.abstract(150, 150, true),
+            thumbnailUrl: faker.image.abstract(150, 150, true),
           },
         }),
       }),

@@ -62,6 +62,62 @@ const albumsApi = createApi({
           method: "DELETE",
         }),
       }),
+      fetchPhotos: builder.query({
+        providesTags: (result, err, album) => {
+          const resultTags = result?.map(({ id }) => ({ type: "Photo", id }));
+          return [
+            {
+              type: "PhotosAlbum",
+              id: album?.id,
+            },
+            ...resultTags,
+          ];
+        },
+
+        query: (album) => {
+          return {
+            url: `/photos`,
+            method: "GET",
+            params: { albumId: album.id },
+          };
+        },
+      }),
+      addPhoto: builder.mutation({
+        invalidatesTags: (result, err, album) => {
+          return [
+            {
+              type: "PhotosAlbum",
+              id: album.id,
+            },
+          ];
+        },
+        query: (album) => ({
+          url: `/photos`,
+          method: "POST",
+          body: {
+            albumId: album.id,
+            title: faker.commerce.productName(),
+            url: faker.image.imageUrl(),
+            thumbnailUrl: faker.image.imageUrl(),
+          },
+        }),
+      }),
+      deletePhoto: builder.mutation({
+        providesTags: (result, err, photo) => {
+          return [
+            {
+              type: "Photo",
+              id: photo.id,
+            },
+          ];
+        },
+        query: (arg) => {
+          return {
+            url: `/photos/${arg.id}`,
+            method: "DELETE",
+          };
+        },
+      }),
     };
   },
 });
@@ -70,5 +126,8 @@ export const {
   useFetchAlbumsQuery,
   useAddAlbumMutation,
   useDeleteAlbumMutation,
+  useFetchPhotosQuery,
+  useAddPhotoMutation,
+  useDeletePhotoMutation,
 } = albumsApi;
 export { albumsApi };

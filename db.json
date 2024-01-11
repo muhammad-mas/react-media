@@ -60,5 +60,27 @@
       "title": "Incredible Granite Gloves"
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "id": "7042",
+      "albumId": "504c",
+      "title": "Unbranded Concrete Mouse",
+      "url": "https://loremflickr.com/640/480",
+      "thumbnailUrl": "https://loremflickr.com/640/480"
+    },
+    {
+      "id": "ee6f",
+      "albumId": "504c",
+      "title": "Handcrafted Cotton Shoes",
+      "url": "https://loremflickr.com/640/480",
+      "thumbnailUrl": "https://loremflickr.com/640/480"
+    },
+    {
+      "id": "1ac5",
+      "albumId": "b7fc",
+      "title": "Bespoke Soft Tuna",
+      "url": "https://loremflickr.com/640/480",
+      "thumbnailUrl": "https://loremflickr.com/640/480"
+    }
+  ]
 }

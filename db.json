@@ -13,6 +13,52 @@
       "name": "Gail Feest"
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": "a4",
+      "title": "Album 4",
+      "userId": "5a51"
+    },
+    {
+      "id": "a5",
+      "title": "Album 5",
+      "userId": "5a51"
+    },
+    {
+      "id": "504c",
+      "userId": "67fe",
+      "title": "Intelligent Granite Towels"
+    },
+    {
+      "id": "b7fc",
+      "userId": "67fe",
+      "title": "Bespoke Cotton Towels"
+    },
+    {
+      "id": "81f5",
+      "userId": "67fe",
+      "title": "Generic Fresh Soap"
+    },
+    {
+      "id": "8cdd",
+      "userId": "67fe",
+      "title": "Electronic Wooden Ball"
+    },
+    {
+      "id": "f1d8",
+      "userId": "eb23",
+      "title": "Bespoke Soft Fish"
+    },
+    {
+      "id": "ebf6",
+      "userId": "eb23",
+      "title": "Electronic Cotton Chair"
+    },
+    {
+      "id": "d5dd",
+      "userId": "eb23",
+      "title": "Incredible Granite Gloves"
+    }
+  ],
   "photos": []
 }
